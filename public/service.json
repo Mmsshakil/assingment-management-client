@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "brand": "Huawei",
+    "img": "https://i.ibb.co/rvpGmxD/houwai.jpg",
+    "title": "Huawei",
+    "details": "This comprehensive service covers all aspects of event planning and coordination for gaming conventions. It includes selecting the ideal venue based on your needs and budget, setting event dates, creating a detailed schedule, managing vendor contracts, overseeing logistics such as transportation and accommodations, and providing on-site event coordination to ensure everything runs smoothly.",
+    "price": "10,000"
+  },
+  {
+    "id":"2",
+    "brand": "Intel",
+    "img": "https://i.ibb.co/KX9Nz7W/intel.jpg",
+    "title": "Intel",
+    "details": "Our registration and ticketing service streamlines the process for attendees. We provide an online registration system, badge printing, and ticket sales management. This service ensures a hassle-free check-in process for convention-goers.",
+    "price": "5,000"
+  },
+  {
+    "id": "3",
+    "brand": "Google",
+    "img": "https://i.ibb.co/0nrnf7x/google.jpg",
+    "title": "Google",
+    "details": "Venue logistics management is crucial to create the ideal setting for your gaming convention. We secure the convention space, arrange for necessary equipment, signage, and layout design, and ensure that the venue is set up to accommodate attendees, exhibitors, and speakers.",
+    "price": "15,000"
+  },
+  {
+    "id": "4",
+    "brand": "Sony",
+    "img": "https://i.ibb.co/pbWWB7X/sony.jpg",
+    "title": "Sony",
+    "details": "The safety and security of your attendees are paramount. We provide a team of trained security personnel, implement robust safety protocols, and have medical staff on standby if needed. Our goal is to create a secure environment for all participants.",
+    "price": "7,500"
+  },
+  {
+    "id": "5",
+    "brand": "Samsung",
+    "img": "https://i.ibb.co/fXNgpdY/samsung.jpg",
+    "title": "Samsung",
+    "details": "Our marketing and promotion service focuses on reaching your target audience effectively. We employ social media marketing, email campaigns, online advertising, and traditional marketing methods to generate excitement and boost attendance.",
+    "price": "8,000"
+  },
+  {
+    "id": "6",
+    "brand": "Apple",
+    "img": "https://i.ibb.co/c35RhmK/apple.jpg",
+    "title": "Apple",
+    "details": "For conventions featuring panels and special guests, we take care of all the coordination. This includes scheduling panel discussions, arranging transportation and accommodations for special guests, and ensuring they have the necessary resources and support during the event.",
+    "price": "6,500"
+  }
+]
