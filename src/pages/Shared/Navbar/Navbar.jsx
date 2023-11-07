@@ -69,9 +69,9 @@ const Navbar = () => {
                 {/* <li className='mr-1'> <NavLink to='/addProduct'>Add Product</NavLink></li> */}
                 <li className='mr-1'> <NavLink to='/addProduct'>Create Assingment</NavLink></li>
                 <li className='mr-1'> <NavLink to='/assingments'>Assingments</NavLink></li>
-                <li className='mr-1'> <NavLink to='/'>My Assingments</NavLink></li>
+                <li className='mr-1'> <NavLink to='/myAssingments'>My Assingments</NavLink></li>
                 <li className='mr-1'> <NavLink to='/'>Submitted Assingments</NavLink></li>
-                <li className='mr-1'> <NavLink to='/cart'>My Cart</NavLink></li>
+                
             </>
                 :
                 <>

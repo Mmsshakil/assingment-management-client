@@ -16,6 +16,7 @@ import Assingments from "../pages/Assingments/Assingments";
 import AssingmentDetails from "../pages/Assingments/AssingmentDetails";
 import UpdateAssingments from "../pages/Assingments/UpdateAssingments";
 import TakeAssingment from "../pages/Assingments/TakeAssingment";
+import MyAssingments from "../pages/Assingments/MyAssingments";
 
 
 
@@ -93,6 +94,11 @@ const router = createBrowserRouter([
                 path: '/takeAssingment/:id',
                 element: <TakeAssingment></TakeAssingment>,
                 loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
+            },
+            {
+                path: '/myAssingments',
+                element: <MyAssingments></MyAssingments>,
+                loader: () => fetch('http://localhost:3000/myAssingments')
             }
 
         ]
