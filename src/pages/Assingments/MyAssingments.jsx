@@ -8,24 +8,22 @@ const MyAssingments = () => {
 
     return (
         <div>
-            <h3>my assingments page: {myAssingments.length}</h3>
-
 
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
-                            
+
                             <th>Title</th>
-                            <th>Mark</th>
+                            <th>Total Mark</th>
                             <th>Obtained Mark</th>
                             <th>Feedback</th>
                             <th>Status</th>
-                            
+
                         </tr>
                     </thead>
-                    <tbody>
+                    
 
                         {
                             myAssingments.map(assingment => <MyAssingmentCard
@@ -34,7 +32,7 @@ const MyAssingments = () => {
                             ></MyAssingmentCard>)
                         }
 
-                    </tbody>
+                    
                 </table>
             </div>
 
