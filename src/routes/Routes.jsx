@@ -91,7 +91,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/takeAssingment/:id',
-                element: <TakeAssingment></TakeAssingment>
+                element: <TakeAssingment></TakeAssingment>,
+                loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
             }
 
         ]
