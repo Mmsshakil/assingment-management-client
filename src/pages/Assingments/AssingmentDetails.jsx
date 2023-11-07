@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AssingmentDetails = () => {
 
     const assingDetails = useLoaderData();
-    const { photo, name, mark, descrip, selectLevel, selectDate } = assingDetails;
+    const {_id, photo, name, mark, descrip, selectLevel, selectDate } = assingDetails;
     console.log(name);
 
     return (
@@ -18,7 +18,7 @@ const AssingmentDetails = () => {
                     <p>Date: {selectDate}</p>
                 </div>
 
-                <button className="btn btn-primary">Take assignment</button>
+                <Link to={`/takeAssingment/${_id}`}><button className="btn btn-primary">Take assignment</button></Link>
             </div>
         </div>
     );

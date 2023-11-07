@@ -15,6 +15,7 @@ import ProductDetails from "../pages/Products/ProductDetails";
 import Assingments from "../pages/Assingments/Assingments";
 import AssingmentDetails from "../pages/Assingments/AssingmentDetails";
 import UpdateAssingments from "../pages/Assingments/UpdateAssingments";
+import TakeAssingment from "../pages/Assingments/TakeAssingment";
 
 
 
@@ -70,7 +71,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/updateAssingments/:id',
-                element: <UpdateAssingments></UpdateAssingments>,
+                element: <PrivateRoute><UpdateAssingments></UpdateAssingments></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
             },
             {
@@ -85,8 +86,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/cart',
-                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+                element: <MyCart></MyCart>,
                 loader: () => fetch('http://localhost:3000/cart')
+            },
+            {
+                path: '/takeAssingment/:id',
+                element: <TakeAssingment></TakeAssingment>
             }
 
         ]

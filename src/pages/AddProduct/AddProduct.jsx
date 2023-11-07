@@ -86,20 +86,7 @@ const AddProduct = () => {
                             </label>
                             <input type="text" name="name" placeholder="Enter product name" className="input input-bordered" required />
                         </div>
-                        {/* <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Brand Name</span>
-                            </label>
-                            <input type="text" name="brand" placeholder="Enter brand name" className="input input-bordered" required />
-                        </div> */}
-
-                        {/* <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Product Type</span>
-                            </label>
-                            <input type="text" name="type" placeholder="Enter product type" className="input input-bordered" required />
-
-                        </div> */}
+                        
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Assingment Mark</span>
