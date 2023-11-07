@@ -1,45 +1,61 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
+import swal from "sweetalert";
 
 const AssingmentCard = ({ assingment, assing, setAssing }) => {
 
-    const { _id, photo, name, mark, descrip, selectLevel, selectDate } = assingment;
+    const { _id, photo, name, mark, descrip, selectLevel, selectDate, email } = assingment;
+    const { user } = useContext(AuthContext);
 
 
     const handleDelete = _id => {
         console.log(_id);
 
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
 
+        const loginEmail = user?.email;
+        console.log(loginEmail, email);
 
-                fetch(`http://localhost:3000/assingments/${_id}`, {
-                    method: 'DELETE'
+        if (loginEmail === email) {
 
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your file has been deleted.',
-                                'success'
-                            )
-                            const remaining = assing.filter(car => car._id !== _id);
-                            setAssing(remaining);
-                        }
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    fetch(`http://localhost:3000/assingments/${_id}`, {
+                        method: 'DELETE'
+
                     })
-            }
-        })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            if (data.deletedCount > 0) {
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                )
+                                const remaining = assing.filter(assi => assi._id !== _id);
+                                setAssing(remaining);
+                            }
+                        })
+                }
+            })
+
+        }else{
+            swal("Error!", "You can't delete this Assingment", "error");
+            return;
+        }
+
+
 
     }
 
