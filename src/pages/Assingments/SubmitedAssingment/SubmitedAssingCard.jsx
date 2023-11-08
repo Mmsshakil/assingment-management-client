@@ -5,10 +5,10 @@ import { AuthContext } from "../../../providers/AuthProvider";
 const SubmitedAssingCard = ({ assing }) => {
 
     const { user } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const { _id, photo, name, mark, descrip, loginEmail, loginName, status } = assing;
-    console.log(assing);
+    // console.log(assing);
 
     return (
         <tbody>
