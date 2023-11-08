@@ -3,7 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const MyAssingmentCard = ({ assingment }) => {
 
-    const { photo, name, mark, descrip, loginEmail } = assingment;
+    const { photo, name, mark, descrip, loginEmail, status, finalMark, finalFeedback } = assingment;
 
     const { user } = useContext(AuthContext);
     const userMail = user?.email;
@@ -16,7 +16,11 @@ const MyAssingmentCard = ({ assingment }) => {
                 <tr>
                     <td>{name}</td>
                     <td>{mark}</td>
-                    <td>Blue</td>
+                    <td>{finalMark}</td>
+                    <td>{finalFeedback}</td>
+                    { status === "confirm" ? <td>Confirmed</td> :
+                        <td>Pending</td>
+                    }
                 </tr>
             ) : (
                 <></>

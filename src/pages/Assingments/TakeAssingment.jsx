@@ -7,7 +7,7 @@ const TakeAssingment = () => {
 
     const assingDetails = useLoaderData();
     const { _id, photo, name, mark, descrip, email } = assingDetails;
-    console.log(name);
+    // console.log(name);
 
     const { user } = useContext(AuthContext);
     console.log(user);
@@ -18,8 +18,9 @@ const TakeAssingment = () => {
         const pdf = form.pdf.value;
         const feedback = form.feedback.value;
         const loginEmail = user?.email;
+        const loginName = user?.displayName;
 
-        const takeAssingment = { pdf, feedback, loginEmail, name, mark, photo };
+        const takeAssingment = { pdf, feedback, loginEmail,loginName, name, mark, photo };
         console.log(takeAssingment);
 
         fetch('http://localhost:3000/submited', {
