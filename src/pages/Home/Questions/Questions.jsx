@@ -2,6 +2,7 @@
 const Questions = () => {
     return (
         <div className="w-2/3 mx-auto my-5 space-y-3">
+            <h1 className="text-center font-bold text-4xl mb-7 mt-16">Frequently Asked Questions</h1>
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
@@ -32,7 +33,7 @@ const Questions = () => {
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                Is this free to use, or do I need to pay for the website?
+                    Is this free to use, or do I need to pay for the website?
                 </div>
                 <div className="collapse-content">
                     <p>This website is totally free to use.</p>
