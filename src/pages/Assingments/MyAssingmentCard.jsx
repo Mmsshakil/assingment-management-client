@@ -18,7 +18,7 @@ const MyAssingmentCard = ({ assingment }) => {
                     <td>{mark}</td>
                     <td>{finalMark}</td>
                     <td>{finalFeedback}</td>
-                    { status === "confirm" ? <td>Confirmed</td> :
+                    { status === "confirm" ? <td>Completed</td> :
                         <td>Pending</td>
                     }
                 </tr>

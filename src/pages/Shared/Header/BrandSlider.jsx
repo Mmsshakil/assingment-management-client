@@ -5,9 +5,9 @@ const BrandSlider = () => {
     return (
         <div className="mt-2 mb-3">
             <Marquee pauseOnHover={true} speed={100}>
-                ( The Best Brand has the Best Products.... )  Our Brands:  Google Smanusng Sony Apple Intel Huawei. We provide best quality product and best services.   
+                Having all assignments in one place simplifies academic life, streamlines time management, reduces stress, and enhances overall productivity and success.
             </Marquee>
-            
+
         </div>
     );
 };

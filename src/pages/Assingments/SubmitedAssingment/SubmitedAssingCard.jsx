@@ -7,23 +7,29 @@ const SubmitedAssingCard = ({ assing }) => {
     const { user } = useContext(AuthContext);
     console.log(user);
 
-    const { _id, photo, name, mark, descrip, loginEmail, loginName } = assing;
+    const { _id, photo, name, mark, descrip, loginEmail, loginName, status } = assing;
     console.log(assing);
 
     return (
         <tbody>
 
-            <tr>
-                <td>{name}</td>
-                <td>{loginName}</td>
-                <td>{mark}</td>
-                <td>
-                    {
-                        user?.email === loginEmail ? <p>You Can not mark your Assingment</p> :
-                            <Link to={`/submitedAssingment/${_id}`}><button className="btn btn-primary">Give Mark</button></Link>
-                    }
-                </td>
-            </tr>
+            {
+                status ?
+                    <tr></tr>
+                    :
+                    <tr>
+                        <td>{name}</td>
+                        <td>{loginName}</td>
+                        <td>{mark}</td>
+                        <td>
+                            {
+                                user?.email === loginEmail ? <p>You Can not mark your Assingment</p> :
+                                    <Link to={`/submitedAssingment/${_id}`}><button className="btn btn-primary">Give Mark</button></Link>
+                            }
+                        </td>
+                    </tr>
+            }
+
 
 
         </tbody>

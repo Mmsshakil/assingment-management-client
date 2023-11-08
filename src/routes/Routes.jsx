@@ -56,11 +56,11 @@ const router = createBrowserRouter([
                 path: '/addProduct',
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
-            {
-                path: '/products/:brand',
-                element: <Products></Products>,
-                loader: ({ params }) => fetch(`http://localhost:3000/product/${params.brand}`)
-            },
+            // {
+            //     path: '/products/:brand',
+            //     element: <Products></Products>,
+            //     loader: ({ params }) => fetch(`http://localhost:3000/product/${params.brand}`)
+            // },
             {
                 path: '/assingments',
                 element: <Assingments></Assingments>,
@@ -77,39 +77,39 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><UpdateAssingments></UpdateAssingments></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
             },
-            {
-                path: '/productDetails/:id',
-                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
-            },
+            // {
+            //     path: '/productDetails/:id',
+            //     element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+            //     loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
+            // },
             {
                 path:'/assingmentDetails/:id',
                 element: <PrivateRoute><AssingmentDetails></AssingmentDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
             },
-            {
-                path: '/cart',
-                element: <MyCart></MyCart>,
-                loader: () => fetch('http://localhost:3000/cart')
-            },
+            // {
+            //     path: '/cart',
+            //     element: <MyCart></MyCart>,
+            //     loader: () => fetch('http://localhost:3000/cart')
+            // },
             {
                 path: '/takeAssingment/:id',
-                element: <TakeAssingment></TakeAssingment>,
+                element: <PrivateRoute><TakeAssingment></TakeAssingment></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
             },
             {
                 path: '/myAssingments',
-                element: <MyAssingments></MyAssingments>,
+                element: <PrivateRoute><MyAssingments></MyAssingments></PrivateRoute>,
                 loader: () => fetch('http://localhost:3000/myAssingments')
             },
             {
                 path: '/submitedAssingment',
-                element: <SubmitedAssingment></SubmitedAssingment>,
+                element: <PrivateRoute><SubmitedAssingment></SubmitedAssingment></PrivateRoute>,
                 loader: () => fetch('http://localhost:3000/myAssingments')
             },
             {
                 path: `/submitedAssingment/:id`,
-                element: <MarkAssingment></MarkAssingment>,
+                element: <PrivateRoute><MarkAssingment></MarkAssingment></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:3000/submitedAssingment/${params.id}`)
             }
 

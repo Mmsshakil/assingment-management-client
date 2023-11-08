@@ -7,8 +7,8 @@ const Header = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                <h1 className="mb-5 text-2xl lg:text-5xl font-bold"><span className=" text-sky-500">ASSINGMENT </span> <span className="text-green-500">MANAGEMENT</span></h1>
-                    <p className="mb-5 border border-b-gray-300 py-1">The Best Brand has the Best Products.... </p>
+                <h1 className="mb-5 text-2xl lg:text-5xl font-bold"><span className=" text-black">ASSINGMENT </span> <span className="text-blue-800">MANAGEMENT</span></h1>
+                    <p className="mb-5 border border-b-gray-300 py-1 text-black">All assignments in one place.</p>
                 </div>
             </div>
         </div>

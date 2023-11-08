@@ -5,37 +5,37 @@ const Questions = () => {
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
+                    Can I login with email-pass or Google?
                 </div>
                 <div className="collapse-content">
-                    <p>hello</p>
+                    <p>Yes, every student can login with their gmail or email pass. If you don not have account, you can also register here.</p>
                 </div>
             </div>
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
+                    Can I add any assingment for all users?
                 </div>
                 <div className="collapse-content">
-                    <p>hello</p>
+                    <p>Yes, if logged in then you can add any assingment.</p>
                 </div>
             </div>
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
+                    I want to mark my assingment. How can I do that?
                 </div>
                 <div className="collapse-content">
-                    <p>hello</p>
+                    <p>No, you can not mark your assingment. But you can mark other students assingment. You can also give mark and feedback to this student.</p>
                 </div>
             </div>
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
+                Is this free to use, or do I need to pay for the website?
                 </div>
                 <div className="collapse-content">
-                    <p>hello</p>
+                    <p>This website is totally free to use.</p>
                 </div>
             </div>
 
