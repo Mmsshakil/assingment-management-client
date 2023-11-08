@@ -87,7 +87,7 @@ const UpdateAssingments = () => {
         <div>
 
             <div className=" w-full md:w-2/3 lg:w-1/2 mx-auto p-10 border mb-14 ">
-                <h2 className="text-xl font-semibold text-center  ">Add New Product</h2>
+                <h2 className="text-xl font-semibold text-center  ">Update Assingment</h2>
 
                 <form onSubmit={handleUpdateAssing}>
                     <div className="flex flex-col gap-3">
@@ -124,7 +124,7 @@ const UpdateAssingments = () => {
                             </label>
                             {/* <input type="text" name="rating" placeholder="Enter product rating" className="input input-bordered" required /> */}
 
-                            <select id="level" name="level" value={selectLevel} onChange={handleLevelChange}>
+                            <select className="p-2 rounded-lg" id="level" name="level" value={selectLevel} onChange={handleLevelChange}>
                                 <option value="easy">Easy</option>
                                 <option value="medium">Medium </option>
                                 <option value="Hard">Hard</option>
@@ -133,7 +133,7 @@ const UpdateAssingments = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Date</span>
+                                <span className="label-text">Submission Deadline</span>
                             </label>
                             <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} required={true}/>
 

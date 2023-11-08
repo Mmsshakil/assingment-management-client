@@ -70,7 +70,7 @@ const AddProduct = () => {
         <div>
 
             <div className=" w-full md:w-2/3 lg:w-1/2 mx-auto p-10 border mb-14 ">
-                <h2 className="text-xl font-semibold text-center  ">Add New Product</h2>
+                <h2 className="text-xl font-semibold text-center  ">Add New Assingment</h2>
 
                 <form onSubmit={handleAddProduct}>
                     <div className="flex flex-col gap-3">
@@ -82,16 +82,16 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Assingment Title -Product Name</span>
+                                <span className="label-text">Assingment Title</span>
                             </label>
-                            <input type="text" name="name" placeholder="Enter product name" className="input input-bordered" required />
+                            <input type="text" name="name" placeholder="Enter Assingment Title" className="input input-bordered" required />
                         </div>
                         
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Assingment Mark</span>
                             </label>
-                            <input type="text" name="mark" placeholder="Enter product price" className="input input-bordered" required />
+                            <input type="text" name="mark" placeholder="Enter Total Mark" className="input input-bordered" required />
 
                         </div>
                         <div className="form-control">
@@ -107,7 +107,7 @@ const AddProduct = () => {
                             </label>
                             {/* <input type="text" name="rating" placeholder="Enter product rating" className="input input-bordered" required /> */}
 
-                            <select id="level" name="level" value={selectLevel} onChange={handleLevelChange}>
+                            <select className="p-2 rounded-lg" id="level" name="level" value={selectLevel} onChange={handleLevelChange}>
                                 <option value="easy">Easy</option>
                                 <option value="medium">Medium </option>
                                 <option value="Hard">Hard</option>
@@ -116,9 +116,9 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Defecaulty Level</span>
+                                <span className="label-text">Submission Deadline</span>
                             </label>
-                            <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} />
+                            <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} required={true}/>
 
                         </div>
 
