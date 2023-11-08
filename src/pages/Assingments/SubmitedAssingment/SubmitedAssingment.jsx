@@ -16,10 +16,10 @@ const SubmitedAssingment = () => {
                     <thead>
                         <tr>
 
-                            <th>Assingment Title</th>
-                            <th>Examine Name</th>
-                            <th>Total Mark</th>
-                            <th></th>
+                            <th className="lg:text-xl lg:font-extrabold">Assingment Title</th>
+                            <th className="lg:text-xl lg:font-extrabold">Examine Name</th>
+                            <th className="lg:text-xl lg:font-extrabold">Total Mark</th>
+                            <th className="lg:text-xl lg:font-extrabold"></th>
 
                         </tr>
                     </thead>

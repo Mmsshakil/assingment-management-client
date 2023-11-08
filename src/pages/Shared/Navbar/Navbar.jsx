@@ -117,9 +117,8 @@ const Navbar = () => {
                                     <img className="w-10 rounded-full" src={user.photoURL} />
                                 </div>
                                 {isHovered && (
-                                    <div className="hide bg-gray-200 p-4 border border-gray-300 text-red-500">
-
-                                        <p className='text-xs bg-white absolute top-16 '>{user.displayName}</p>
+                                    <div className="">
+                                        <p className='text-base md:text-lg text-black bg-white p-2 rounded-lg absolute top-16 lg:top-24 right-12 lg:right-24 '>{user.displayName}</p>
                                     </div>
                                 )}
 

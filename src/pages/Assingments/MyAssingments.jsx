@@ -15,15 +15,14 @@ const MyAssingments = () => {
                     <thead>
                         <tr>
 
-                            <th>Title</th>
-                            <th>Total Mark</th>
-                            <th>Obtained Mark</th>
-                            <th>Feedback</th>
-                            <th>Status</th>
+                            <th className="lg:text-xl lg:font-extrabold">Assingment Title</th>
+                            <th className="lg:text-xl lg:font-extrabold">Total Mark</th>
+                            <th className="lg:text-xl lg:font-extrabold">Obtained Mark</th>
+                            <th className="lg:text-xl lg:font-extrabold">Feedback</th>
+                            <th className="lg:text-xl lg:font-extrabold">Status</th>
 
                         </tr>
                     </thead>
-                    
 
                         {
                             myAssingments.map(assingment => <MyAssingmentCard

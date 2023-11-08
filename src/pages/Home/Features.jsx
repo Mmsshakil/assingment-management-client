@@ -1,9 +1,9 @@
 
 const Features = () => {
     return (
-        <div className="my-14">
+        <div className="my-14 flex flex-col justify-center items-center text-center ">
             <h1 className="text-center font-bold text-4xl mb-10">Features</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 mx-auto items-center justify-center gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto items-center justify-center gap-4">
                 <div className="card w-96 h-64  shadow-xl image-full">
                     <figure><img src="https://i.ibb.co/N23BQZ1/bacnah-1.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
