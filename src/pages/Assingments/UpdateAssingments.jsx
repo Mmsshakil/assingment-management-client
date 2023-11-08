@@ -140,7 +140,7 @@ const UpdateAssingments = () => {
                         </div>
 
                         <div className="form-control mt-3">
-                            <button className="btn btn-primary">Update Assingment</button>
+                            <button className="btn btn-outline btn-success">Update Assingment</button>
                         </div>
                     </div>
                 </form>

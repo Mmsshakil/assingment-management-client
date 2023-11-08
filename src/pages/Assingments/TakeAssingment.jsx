@@ -66,7 +66,7 @@ const TakeAssingment = () => {
                     </div>
 
                     <div className="form-control mt-3">
-                        <button className="btn btn-primary">Submit</button>
+                        <button className="btn btn-outline btn-success">Submit</button>
                     </div>
                 </div>
             </form>

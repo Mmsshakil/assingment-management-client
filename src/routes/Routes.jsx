@@ -69,7 +69,7 @@ const router = createBrowserRouter([
             {
                 path: '/updateAssingments/:id',
                 element: <PrivateRoute><UpdateAssingments></UpdateAssingments></PrivateRoute>,
-                loader: ({params}) => fetch(`https://assingment-manage-server.vercel.app/assingmentDetails/${params.id}`)
+                loader: ({params}) => fetch(`https://assingment-manage-server.vercel.app/product/${params.id}`)
             },
         
             {

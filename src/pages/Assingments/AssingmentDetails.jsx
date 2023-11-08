@@ -18,7 +18,7 @@ const AssingmentDetails = () => {
                     <p>Date: {selectDate}</p>
                 </div>
 
-                <Link to={`/takeAssingment/${_id}`}><button className="btn btn-primary">Take assignment</button></Link>
+                <Link to={`/takeAssingment/${_id}`}><button className="btn btn-outline btn-success mt-2">Take assignment</button></Link>
             </div>
         </div>
     );
