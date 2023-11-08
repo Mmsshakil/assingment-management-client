@@ -58,45 +58,45 @@ const router = createBrowserRouter([
             {
                 path: '/assingments',
                 element: <Assingments></Assingments>,
-                loader: () => fetch('http://localhost:3000/assingments')
+                loader: () => fetch('https://assingment-manage-server.vercel.app/assingments')
             },
             {
                 path: '/updateProducts/:id',
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://assingment-manage-server.vercel.app/products/${params.id}`)
 
             },
             {
                 path: '/updateAssingments/:id',
                 element: <PrivateRoute><UpdateAssingments></UpdateAssingments></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
+                loader: ({params}) => fetch(`https://assingment-manage-server.vercel.app/assingmentDetails/${params.id}`)
             },
         
             {
                 path:'/assingmentDetails/:id',
                 element: <PrivateRoute><AssingmentDetails></AssingmentDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
+                loader: ({params}) => fetch(`https://assingment-manage-server.vercel.app/assingmentDetails/${params.id}`)
             },
           
             {
                 path: '/takeAssingment/:id',
                 element: <PrivateRoute><TakeAssingment></TakeAssingment></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/assingmentDetails/${params.id}`)
+                loader: ({params}) => fetch(`https://assingment-manage-server.vercel.app/assingmentDetails/${params.id}`)
             },
             {
                 path: '/myAssingments',
                 element: <PrivateRoute><MyAssingments></MyAssingments></PrivateRoute>,
-                loader: () => fetch('http://localhost:3000/myAssingments')
+                loader: () => fetch('https://assingment-manage-server.vercel.app/myAssingments')
             },
             {
                 path: '/submitedAssingment',
                 element: <PrivateRoute><SubmitedAssingment></SubmitedAssingment></PrivateRoute>,
-                loader: () => fetch('http://localhost:3000/myAssingments')
+                loader: () => fetch('https://assingment-manage-server.vercel.app/myAssingments')
             },
             {
                 path: `/submitedAssingment/:id`,
                 element: <PrivateRoute><MarkAssingment></MarkAssingment></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/submitedAssingment/${params.id}`)
+                loader: ({params}) => fetch(`https://assingment-manage-server.vercel.app/submitedAssingment/${params.id}`)
             }
 
         ]

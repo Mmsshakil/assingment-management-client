@@ -23,7 +23,7 @@ const TakeAssingment = () => {
         const takeAssingment = { pdf, feedback, loginEmail,loginName, name, mark, photo };
         console.log(takeAssingment);
 
-        fetch('http://localhost:3000/submited', {
+        fetch('https://assingment-manage-server.vercel.app/submited', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

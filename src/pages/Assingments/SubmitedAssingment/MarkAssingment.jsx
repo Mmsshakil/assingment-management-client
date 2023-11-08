@@ -20,7 +20,7 @@ const MarkAssingment = () => {
 
 
 
-        fetch(`http://localhost:3000/submitedAssingment/${_id}`, {
+        fetch(`https://assingment-manage-server.vercel.app/submitedAssingment/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

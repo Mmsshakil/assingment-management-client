@@ -47,7 +47,7 @@ const AddProduct = () => {
         console.log(newProduct);
 
         // send the data to the server
-        fetch('http://localhost:3000/product', {
+        fetch('https://assingment-manage-server.vercel.app/product', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

@@ -28,7 +28,7 @@ const ProductDetails = () => {
         console.log(newCart);
 
         // sent cart data to the server
-        fetch('http://localhost:3000/cart', {
+        fetch('https://assingment-manage-server.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

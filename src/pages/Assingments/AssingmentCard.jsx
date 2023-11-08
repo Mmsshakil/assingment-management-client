@@ -30,7 +30,7 @@ const AssingmentCard = ({ assingment, assing, setAssing }) => {
             }).then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:3000/assingments/${_id}`, {
+                    fetch(`https://assingment-manage-server.vercel.app/assingments/${_id}`, {
                         method: 'DELETE'
 
                     })

@@ -33,7 +33,7 @@ const UpdateProduct = () => {
         console.log(updatedProduct);
 
         // send the data to the server
-        fetch(`http://localhost:3000/product/${_id}`, {
+        fetch(`https://assingment-manage-server.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
