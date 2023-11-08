@@ -48,8 +48,8 @@ const TakeAssingment = () => {
         <div className="">
 
             <form onSubmit={handleTakeAssingment} className="mx-auto flex flex-col justify-center w-1/2">
-                <h1 className="text-center text-3xl font-bold">Title: {name}</h1>
-                <h1 className="text-center text-xl ">Submit your PDF link & feedback</h1>
+                <h1 className="text-center text-sm md:text-2xl md:font-bold">Title: {name}</h1>
+                <h1 className="text-center text-sm md:text-xl ">Submit PDF link & feedback</h1>
                 <hr />
                 <div className="flex flex-col gap-3 my-5">
                     <div className="form-control">
