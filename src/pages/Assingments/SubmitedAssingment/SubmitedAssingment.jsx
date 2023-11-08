@@ -8,8 +8,7 @@ const SubmitedAssingment = () => {
 
     return (
         <div>
-            <h2>thi is submited assingment: {submitedAssingments.length}</h2>
-
+           
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
