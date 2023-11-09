@@ -1,7 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 const MarkAssingment = () => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
+
     const submitAllAssingment = useLoaderData();
     const { _id, pdf, name, feedback } = submitAllAssingment;
 
@@ -32,6 +37,7 @@ const MarkAssingment = () => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
                     swal("Success!", "Assingment marked Successfully", "success");
+                    navigate(location?.state ? location.state : '/submitedAssingment');
                 }
             })
     }

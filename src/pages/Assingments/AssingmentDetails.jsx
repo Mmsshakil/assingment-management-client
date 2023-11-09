@@ -8,7 +8,7 @@ const AssingmentDetails = () => {
 
     return (
         <div className="flex justify-center items-center mx-auto">
-            <div className="space-y-3">
+            <div className="space-y-3 px-4 md:px-10 mb-10">
                 <img className="w-96" src={photo} alt="" />
                 <p className="text-2xl">Title: {name}</p>
                 <p>Description: {descrip}</p>

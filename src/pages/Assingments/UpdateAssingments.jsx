@@ -135,7 +135,7 @@ const UpdateAssingments = () => {
                             <label className="label">
                                 <span className="label-text">Submission Deadline</span>
                             </label>
-                            <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} required={true}/>
+                            <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} required={true} />
 
                         </div>
 

@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import swal from "sweetalert";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 
 const TakeAssingment = () => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
 
     const assingDetails = useLoaderData();
     const { _id, photo, name, mark, descrip, email } = assingDetails;
@@ -20,7 +24,7 @@ const TakeAssingment = () => {
         const loginEmail = user?.email;
         const loginName = user?.displayName;
 
-        const takeAssingment = { pdf, feedback, loginEmail,loginName, name, mark, photo };
+        const takeAssingment = { pdf, feedback, loginEmail, loginName, name, mark, photo };
         console.log(takeAssingment);
 
         fetch('https://assingment-manage-server.vercel.app/submited', {
@@ -36,6 +40,8 @@ const TakeAssingment = () => {
                 console.log(data);
                 if (data.insertedId) {
                     swal("Success!", "Assingment Submited", "success");
+                    navigate(location?.state ? location.state : '/myAssingments');
+
                 }
             })
 

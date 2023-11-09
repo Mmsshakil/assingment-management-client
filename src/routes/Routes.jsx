@@ -58,7 +58,8 @@ const router = createBrowserRouter([
             {
                 path: '/assingments',
                 element: <Assingments></Assingments>,
-                loader: () => fetch('https://assingment-manage-server.vercel.app/assingments')
+                loader: () => fetch(`https://assingment-manage-server.vercel.app/assingments`)
+                // loader: ({currentPage, itemsPerpage}) => fetch(`https://assingment-manage-server.vercel.app/assingments?page=${currentPage}&size=${itemsPerpage}`)
             },
             {
                 path: '/updateProducts/:id',

@@ -4,10 +4,15 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import swal from 'sweetalert';
 import { AuthContext } from "../../providers/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
 
-    const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
+
+    const { user } = useContext(AuthContext);
 
     const [selectDate, setSelectDate] = useState(null);
     const [selectLevel, setSelectLevel] = useState('easy');
@@ -43,7 +48,7 @@ const AddProduct = () => {
         // }
 
         // const newProduct = { photo, name, brand, type, price, descrip, rating };
-        const newProduct = { photo, email, name, mark, descrip, selectLevel , selectDate };
+        const newProduct = { photo, email, name, mark, descrip, selectLevel, selectDate };
         console.log(newProduct);
 
         // send the data to the server
@@ -60,6 +65,7 @@ const AddProduct = () => {
                 console.log(data);
                 if (data.insertedId) {
                     swal("Success!", "New Product Added", "success");
+                    navigate(location?.state ? location.state : '/assingments');
                 }
             })
 
@@ -86,7 +92,7 @@ const AddProduct = () => {
                             </label>
                             <input type="text" name="name" placeholder="Enter Assingment Title" className="input input-bordered" required />
                         </div>
-                        
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Assingment Mark</span>
@@ -118,7 +124,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">Submission Deadline</span>
                             </label>
-                            <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} required={true}/>
+                            <DatePicker selected={selectDate} onChange={handleDateChange} minDate={new Date()} required={true} />
 
                         </div>
 
