@@ -129,7 +129,7 @@ const AddProduct = () => {
                         </div>
 
                         <div className="form-control mt-3">
-                            <button className="btn btn-primary">Add Product</button>
+                            <button className="btn btn-primary">Create Assingment</button>
                         </div>
                     </div>
                 </form>
